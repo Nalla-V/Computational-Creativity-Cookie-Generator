@@ -1,0 +1,365 @@
+{
+  "recipes": [
+    {
+      "name": "apple cinnamon cookie",
+      "category": "cookie",
+      "flavour_profile": ["fruity", "spicy"],
+      "texture_profile": ["soft_center", "crunchy_edges"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 30, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "olive oil", "role": "fat", "type": "liquid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 40, "unit": "g", "ingredient": "grated apples", "role": "flavour", "type": "fruit" },
+        { "amount": 1, "unit": "ml", "ingredient": "vanilla extract", "role": "aroma", "type": "liquid" },
+        { "amount": 2, "unit": "g", "ingredient": "cinnamon powder", "role": "spice", "type": "dry" },
+        { "amount": 9, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "powdered sugar", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "cheddar jalapeno cookie",
+      "category": "cookie",
+      "flavour_profile": ["savory", "spicy"],
+      "texture_profile": ["crumbly", "chewy"],
+      "meal_type": "snack",
+      "base_ingredients": [
+        { "amount": 45, "unit": "g", "ingredient": "cornmeal", "role": "structure", "type": "dry" },
+        { "amount": 12, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 30, "unit": "g", "ingredient": "grated cheddar cheese", "role": "flavour", "type": "dairy" },
+        { "amount": 1, "unit": "g", "ingredient": "garlic powder", "role": "spice", "type": "dry" },
+        { "amount": 8, "unit": "g", "ingredient": "diced jalapenos", "role": "flavour", "type": "vegetable" }
+      ],
+      "external_toppings": [
+        { "amount": 5, "unit": "g", "ingredient": "grated cheddar", "role": "decoration", "type": "dairy" }
+      ]
+    },
+    {
+      "name": "blueberry almond cookie",
+      "category": "cookie",
+      "flavour_profile": ["fruity", "nutty"],
+      "texture_profile": ["soft", "moist"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 30, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 50, "unit": "g", "ingredient": "blueberry puree", "role": "flavour", "type": "fruit" },
+        { "amount": 8, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" },
+        { "amount": 1, "unit": "ml", "ingredient": "vanilla extract", "role": "aroma", "type": "liquid" }
+      ],
+      "external_toppings": [
+        { "amount": 8, "unit": "g", "ingredient": "crushed almonds", "role": "decoration", "type": "nut" }
+      ]
+    },
+    {
+      "name": "smoked paprika honey cookie",
+      "category": "cookie",
+      "flavour_profile": ["smoky", "sweet", "spicy"],
+      "texture_profile": ["crisp", "crumbly"],
+      "meal_type": "snack",
+      "base_ingredients": [
+        { "amount": 40, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 25, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking soda", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 8, "unit": "g", "ingredient": "smoked paprika", "role": "spice", "type": "dry" },
+        { "amount": 6, "unit": "g", "ingredient": "honey", "role": "sweetener", "type": "liquid" },
+        { "amount": 1, "unit": "g", "ingredient": "salt", "role": "seasoning", "type": "mineral" }
+      ],
+      "external_toppings": [
+        { "amount": 2, "unit": "g", "ingredient": "paprika sugar mix", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "rosemary thyme cookie",
+      "category": "cookie",
+      "flavour_profile": ["herbal", "savory"],
+      "texture_profile": ["crumbly"],
+      "meal_type": "snack",
+      "base_ingredients": [
+        { "amount": 60, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 20, "unit": "g", "ingredient": "grated cheddar", "role": "flavour", "type": "dairy" },
+        { "amount": 1, "unit": "g", "ingredient": "rosemary", "role": "herb", "type": "dry" },
+        { "amount": 1, "unit": "g", "ingredient": "thyme", "role": "herb", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 6, "unit": "g", "ingredient": "grated cheddar", "role": "decoration", "type": "dairy" }
+      ]
+    },
+    {
+      "name": "chili chocolate cookie",
+      "category": "cookie",
+      "flavour_profile": ["sweet", "spicy", "bitter"],
+      "texture_profile": ["chewy", "dense"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 15, "unit": "g", "ingredient": "cocoa powder", "role": "flavour", "type": "dry" },
+        { "amount": 1, "unit": "g", "ingredient": "chili powder", "role": "spice", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "dark chocolate chips", "role": "flavour", "type": "sweet" },
+        { "amount": 9, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 4, "unit": "g", "ingredient": "sea salt flakes", "role": "contrast", "type": "mineral" }
+      ]
+    },
+    {
+      "name": "lemon basil cookie",
+      "category": "cookie",
+      "flavour_profile": ["citrus", "herbal"],
+      "texture_profile": ["soft", "crumbly"],
+      "meal_type": "snack",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "olive oil", "role": "fat", "type": "liquid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 3, "unit": "ml", "ingredient": "lemon juice", "role": "acid", "type": "liquid" },
+        { "amount": 2, "unit": "g", "ingredient": "lemon zest", "role": "flavour", "type": "dry" },
+        { "amount": 1, "unit": "g", "ingredient": "fresh basil", "role": "herb", "type": "leaf" },
+        { "amount": 7, "unit": "g", "ingredient": "white sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 2, "unit": "g", "ingredient": "lemon glaze", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "sesame honey cookie",
+      "category": "cookie",
+      "flavour_profile": ["nutty", "sweet"],
+      "texture_profile": ["crisp"],
+      "meal_type": "snack",
+      "base_ingredients": [
+        { "amount": 40, "unit": "g", "ingredient": "whole wheat flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 10, "unit": "g", "ingredient": "toasted sesame seeds", "role": "flavour", "type": "nut" },
+        { "amount": 8, "unit": "g", "ingredient": "honey", "role": "sweetener", "type": "liquid" },
+        { "amount": 1, "unit": "g", "ingredient": "salt", "role": "seasoning", "type": "mineral" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "sesame seeds", "role": "decoration", "type": "nut" }
+      ]
+    },
+    {
+      "name": "matcha coconut cookie",
+      "category": "cookie",
+      "flavour_profile": ["earthy", "sweet", "tropical"],
+      "texture_profile": ["chewy"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 30, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 3, "unit": "g", "ingredient": "matcha powder", "role": "flavour", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "shredded coconut", "role": "flavour", "type": "fruit" },
+        { "amount": 8, "unit": "g", "ingredient": "white sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 4, "unit": "g", "ingredient": "toasted coconut flakes", "role": "decoration", "type": "fruit" }
+      ]
+    },
+    {
+      "name": "ginger molasses cookie",
+      "category": "cookie",
+      "flavour_profile": ["spicy", "sweet", "warm"],
+      "texture_profile": ["soft_center", "chewy_edges"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 5, "unit": "g", "ingredient": "ginger powder", "role": "spice", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "molasses", "role": "sweetener", "type": "liquid" },
+        { "amount": 5, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" },
+        { "amount": 1, "unit": "g", "ingredient": "cinnamon", "role": "spice", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "sugar crystals", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "lavender honey cookie",
+      "category": "cookie",
+      "flavour_profile": ["floral", "sweet"],
+      "texture_profile": ["delicate", "crumbly"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 1, "unit": "g", "ingredient": "dried lavender", "role": "herb", "type": "flower" },
+        { "amount": 8, "unit": "g", "ingredient": "honey", "role": "sweetener", "type": "liquid" },
+        { "amount": 1, "unit": "g", "ingredient": "lemon zest", "role": "flavour", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 2, "unit": "g", "ingredient": "lavender sugar", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "coffee hazelnut cookie",
+      "category": "cookie",
+      "flavour_profile": ["nutty", "bitter", "sweet"],
+      "texture_profile": ["chewy"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 30, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 3, "unit": "g", "ingredient": "instant coffee", "role": "flavour", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "chopped hazelnuts", "role": "flavour", "type": "nut" },
+        { "amount": 8, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 4, "unit": "g", "ingredient": "chocolate drizzle", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "pumpkin spice cookie",
+      "category": "cookie",
+      "flavour_profile": ["spicy", "sweet", "earthy"],
+      "texture_profile": ["soft_center"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 40, "unit": "g", "ingredient": "pumpkin puree", "role": "flavour", "type": "vegetable" },
+        { "amount": 1, "unit": "g", "ingredient": "pumpkin spice mix", "role": "spice", "type": "dry" },
+        { "amount": 8, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 4, "unit": "g", "ingredient": "cream cheese glaze", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "black sesame matcha cookie",
+      "category": "cookie",
+      "flavour_profile": ["earthy", "nutty", "sweet"],
+      "texture_profile": ["crisp"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 30, "unit": "g", "ingredient": "rice flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 3, "unit": "g", "ingredient": "matcha powder", "role": "flavour", "type": "dry" },
+        { "amount": 10, "unit": "g", "ingredient": "black sesame paste", "role": "flavour", "type": "nut" },
+        { "amount": 8, "unit": "g", "ingredient": "white sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "white sesame seeds", "role": "decoration", "type": "nut" }
+      ]
+    },
+    {
+      "name": "cherry pistachio cookie",
+      "category": "cookie",
+      "flavour_profile": ["fruity", "nutty", "sweet"],
+      "texture_profile": ["soft", "chewy"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 20, "unit": "g", "ingredient": "chopped dried cherries", "role": "flavour", "type": "fruit" },
+        { "amount": 10, "unit": "g", "ingredient": "crushed pistachios", "role": "flavour", "type": "nut" },
+        { "amount": 7, "unit": "g", "ingredient": "white sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "cherry glaze", "role": "decoration", "type": "sweet" }
+      ]
+    },
+    {
+      "name": "cardamom rose cookie",
+      "category": "cookie",
+      "flavour_profile": ["floral", "spicy", "sweet"],
+      "texture_profile": ["delicate", "crumbly"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 15, "unit": "g", "ingredient": "butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 2, "unit": "g", "ingredient": "ground cardamom", "role": "spice", "type": "dry" },
+        { "amount": 2, "unit": "ml", "ingredient": "rose water", "role": "aroma", "type": "liquid" },
+        { "amount": 8, "unit": "g", "ingredient": "white sugar", "role": "sweetener", "type": "dry" }
+      ],
+      "external_toppings": [
+        { "amount": 2, "unit": "g", "ingredient": "crushed dried rose petals", "role": "decoration", "type": "flower" }
+      ]
+    },
+    {
+      "name": "brown butter pecan cookie",
+      "category": "cookie",
+      "flavour_profile": ["nutty", "sweet", "buttery"],
+      "texture_profile": ["chewy", "crisp_edges"],
+      "meal_type": "dessert",
+      "base_ingredients": [
+        { "amount": 35, "unit": "g", "ingredient": "all-purpose flour", "role": "structure", "type": "dry" },
+        { "amount": 20, "unit": "g", "ingredient": "browned butter", "role": "fat", "type": "solid" },
+        { "amount": 1, "unit": "g", "ingredient": "baking powder", "role": "leavening", "type": "chemical" },
+        { "amount": 0.5, "unit": "", "ingredient": "egg", "role": "binder", "type": "protein" }
+      ],
+      "flavour_addins": [
+        { "amount": 12, "unit": "g", "ingredient": "chopped pecans", "role": "flavour", "type": "nut" },
+        { "amount": 8, "unit": "g", "ingredient": "brown sugar", "role": "sweetener", "type": "dry" },
+        { "amount": 1, "unit": "g", "ingredient": "salt", "role": "seasoning", "type": "mineral" }
+      ],
+      "external_toppings": [
+        { "amount": 3, "unit": "g", "ingredient": "pecan halves", "role": "decoration", "type": "nut" }
+      ]
+    }
+  ]
+}
