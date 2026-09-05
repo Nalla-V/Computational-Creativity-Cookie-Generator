@@ -1,31 +1,122 @@
 # The Great Bitwise Bake Off
 
-## Overview
-This project implements a genetic algorithm system to generate novel cookie recipes. Starting from a curated JSON knowledge base of recipes, the system evolves new recipes through crossover and mutation operators. Each recipe is evaluated using a fitness function that balances structural validity, ingredient diversity, and semantic novelty. The system selects diverse, high-quality recipes for presentation in a generative AI-assisted cookbook.
+A genetic algorithm that evolves novel cookie recipes from a knowledge base of
+existing ones. Recipes are recombined through crossover and mutation, scored by
+a fitness function balancing structural validity, ingredient diversity and
+semantic novelty, and the most distinct high-scoring results are compiled into a
+generated cookbook.
 
-## Repository Structure
-- `recipes.json` — JSON knowledge base containing 17 original cookie recipes.
-- `cookie_generator.py` — Contains the full implementation of recipe representation, genetic algorithm operators, fitness evaluation, population evolution, diversity selection, and visualization.
+The design problem is that novelty and edibility pull against each other. A
+recipe that shares nothing with the originals scores well on novelty and may not
+be bakeable at all, so the fitness function has to reward difference while
+enforcing the structure a cookie actually needs.
 
-## Requirements
-- Python 3.8+
-- Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-## Running Experiments
-1. Execute the main script to load recipes, evolve the population over generations, and output the top recipes with fitness scores and details: 
-```bash
-python cookie_generator.py
-```
-The script also generates and saves a PCA plot (`embedding_space.png`) visualizing semantic relationships between original and generated recipes.
+## How it works
+
+**Knowledge base.** 17 cookie recipes in a custom JSON schema, each ingredient
+annotated with amount, unit, role (structure, fat, binder, leavening, flavour)
+and type. Sweet and savoury recipes are both included so the search space has
+something to recombine.
+
+**Representation.** Every recipe, original or evolved, is a `CookieRecipe`.
+Duplicate ingredients are merged by summing amounts, and toppings are capped at
+the three largest to stop recipes accumulating clutter.
+
+**Fitness.** Four components:
+
+- *Structural validity* — a −10 penalty for missing any of structure, fat,
+  binder or leavening. Severe, because a recipe missing these is not a cookie.
+- *Ingredient diversity* — a reward for distinct normalised ingredients.
+- *Distribution* — favours roughly three base ingredients, two to six flavour
+  add-ins, and at least one topping.
+- *Novelty* — one minus the maximum cosine similarity to any original recipe,
+  using `all-MiniLM-L6-v2` embeddings of the ingredient text.
+
+**Crossover** runs per ingredient category rather than across the whole recipe,
+so bases mix with bases and toppings with toppings. With 30% probability an
+entire category is inherited from one parent intact.
+
+**Mutation** fires on 60% of offspring and adds, removes, replaces or rescales
+an ingredient (amounts by a factor between 0.8 and 1.3). When adding a flavour
+ingredient, rarer ingredients in the current population are preferred, which
+pushes the search away from converging on the same few additions.
+
+## Parameters
+
+| Parameter | Value |
+|---|---|
+| Population size | 20 |
+| Generations | 8 |
+| Mutation rate | 0.6 |
+| Crossover probability | 0.3 |
+| Fitness threshold | 3 |
+| Max mutation attempts | 5 |
+| Embedding model | `all-MiniLM-L6-v2` |
+
+Each run starts from a third original recipes and two-thirds mutants of them.
 
 ## Results
-The system produces novel, diverse cookie recipes that maintain baking logic and creativity. Quantitative metrics such as Jaccard distances and embedding visualizations assess quality and novelty, supporting computational creativity claims.
 
-## Cookbook Generation and Presentation
-Final recipes from the generator can be formatted into a cookbook, complemented by AI-generated images (e.g., via Gemini-AI) and design tools like Canva to enhance visual appeal and creativity.
+160 recipes across eight generations. In the final population, 65% scored high
+fitness (≥ 7), 25% medium (3–7) and 10% low (< 3).
 
+The three selected recipes:
 
+| Recipe | Fitness |
+|---|---|
+| Apples Cheese Cheddar Cookie | 9.34 |
+| Blueberry Sesame Pistachios Cookie | 8.22 |
+| Jalapenos Almonds Brown Cookie | 7.40 |
 
+Average pairwise Jaccard distance across their major flavour add-ins is 1.000 —
+no overlap at all between the three. Across all ingredients, average pairwise
+Jaccard similarity is 0.208, which comes from the shared base (flour, egg,
+baking powder) that the structural constraint requires every recipe to have.
 
+![Recipe embedding space](Novelity.png)
+
+The PCA plot shows the generated recipes sitting clearly outside the cluster of
+originals, which is the novelty term doing its job.
+
+The interesting outputs were the ones that paired savoury with sweet — apple
+with cheddar, jalapeño with lavender. Those are combinations the fitness
+function permitted rather than sought, and they are the cases where the search
+found something a person probably would not have written down.
+
+## Running it
+
+```bash
+pip install -r requirements.txt
+python cookie_generator.py
+```
+
+The script evolves the population, prints the top recipes with their fitness
+scores and ingredient breakdowns, and saves the PCA plot of the embedding space.
+
+Runs are stochastic, so the exact recipes differ each time. The system is meant
+to explore the space, not to reproduce a fixed output.
+
+## Repository contents
+
+| File | Purpose |
+|---|---|
+| `recipes.json` | knowledge base, 17 annotated cookie recipes |
+| `cookie_generator.py` | representation, GA operators, fitness, selection, plotting |
+| `Novelity.png` | PCA plot of original against generated recipes |
+
+## Limitations
+
+- Ingredient replacement has no culinary logic beyond the role constraint, so
+  the structural penalty keeps recipes bakeable without making them sensible.
+- Everything depends on the JSON knowledge base being well formed and richly
+  annotated; sparse metadata degrades output quality directly.
+- Novelty is measured by embedding distance, which captures lexical and semantic
+  difference but says nothing about whether a recipe tastes good. Human
+  evaluation was not part of this work.
+- 17 source recipes is a small inspiring set for a genetic algorithm.
+
+## Contributors
+
+- Nallathambi Vethiappan
+- Ekansh Khanulia
+- Aparajita Saha
