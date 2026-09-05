@@ -11,6 +11,9 @@ recipe that shares nothing with the originals scores well on novelty and may not
 be bakeable at all, so the fitness function has to reward difference while
 enforcing the structure a cookie actually needs.
 
+**The output:** [`cookbook.pdf`](cookbook.pdf) — the three selected recipes laid
+out as a cookbook. **Full write-up:** [`report.pdf`](report.pdf).
+
 ## How it works
 
 **Knowledge base.** 17 cookie recipes in a custom JSON schema, each ingredient
@@ -103,6 +106,8 @@ to explore the space, not to reproduce a fixed output.
 | `recipes.json` | knowledge base, 17 annotated cookie recipes |
 | `cookie_generator.py` | representation, GA operators, fitness, selection, plotting |
 | `Novelity.png` | PCA plot of original against generated recipes |
+| `cookbook.pdf` | the generated cookbook — the three recipes laid out with AI-generated imagery |
+| `report.pdf` | full write-up: method, fitness design, evaluation |
 
 ## Limitations
 
